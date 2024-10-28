@@ -8,7 +8,7 @@ const { user } = useTelegram();
 const MY_ID = user?.id ?? 4252;
 
 export async function fetchTasks() {
-  const { data } = await supabase.select('*');
+  const { data } = await supabase.from('tasks').select('*');
   return data || [];
 }
 

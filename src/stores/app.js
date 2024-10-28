@@ -1,5 +1,10 @@
 import { defineStore } from 'pinia';
-import { getOrCreateUser, registerRef, fetchTasks } from '@/api/app';
+import {
+  getOrCreateUser,
+  registerRef,
+  fetchTasks,
+  completeTask,
+} from '@/api/app';
 import { useScoreStore } from './score';
 import { useTelegram } from '@/services/telegram';
 
@@ -22,7 +27,7 @@ export const useAppStore = defineStore('app', {
       }
     },
     async completeTask(task) {
-      await this.completeTask(this.user, task);
+      await completeTask(this.user, task);
     },
     async fetchTasks() {
       this.tasks = await fetchTasks();

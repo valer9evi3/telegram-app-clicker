@@ -34,7 +34,9 @@ const friends = computed(() =>
 );
 
 function copy() {
-  navigator.clipboard.writeText('');
+  navigator.clipboard.writeText(
+    'https://t.me/testTelegramAppClicker_bot?start=' + user?.id
+  );
   referralText.value = 'Copied!';
 }
 </script>

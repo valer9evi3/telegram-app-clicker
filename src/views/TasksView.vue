@@ -13,3 +13,8 @@
     </ul>
   </div>
 </template>
+
+<script setup>
+import { onMounted, ref } from 'vue';
+onMounted(() => {});
+</script>

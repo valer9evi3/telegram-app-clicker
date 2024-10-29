@@ -29,7 +29,7 @@ const referralText = ref('Your referral');
 const friends = computed(() =>
   Object.keys(appStore.user.friends).map((id) => ({
     id,
-    name: appUser.friends[id],
+    name: appStore.friends?.[id],
   }))
 );
 
